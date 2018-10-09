@@ -24,7 +24,7 @@ public class MainController {
         RestTemplate restTemplate = new RestTemplate();
         WeatherModel weatherModel = restTemplate.getForObject(link, WeatherModel.class);
 
-        model.addAttribute("temp", weatherModel.getMain().getTemp());
+        model.addAttribute("temp", weatherModel.getMain().getTemp() + " " + weatherModel.getClouds().getAll());
         return "index";
     }
 }
