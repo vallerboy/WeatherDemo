@@ -13,7 +13,7 @@ public class WeatherModel {
     }
 
 
-    static class WeatherDetails{
+    public static class WeatherDetails{
         private double temp;
 
         public double getTemp() {
